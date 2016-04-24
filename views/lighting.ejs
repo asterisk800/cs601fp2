@@ -1,0 +1,37 @@
+<%include header%>
+<%include navigator%>
+<div class="jumbotron-fluid">
+    <h2 class="page-header">Lighting</h2>
+    <p>Home Automation Lights</p>
+</div>
+
+<div>
+    <a type="button" href="./add_camera" class="btn btn-primary btn-lg">Add New Camera</a>
+</div>
+
+
+<div class="container-fluid card card-block">
+    <!--loop through each item-->
+    <% camera.forEach(function(cam){ %>
+    <div class="container card col-md-3">
+        <h2 class="card-title">Name: <%= cam.camera.name %> </h2>
+        <h4 class="card-subtitle"> Location: <%= cam.camera.location %> </h4>
+        <img class="card-img-top center-block" data-src="..." src="images/light-bulb-2-512.jpg" alt="Camera" height="25%" width="25%">
+        <p class="card-title">Location: <%= cam.camera.location %></p>
+        <p class="card-footer"> ID: <%= cam._id %></p>
+        <a type="button" class="btn-danger btn-sm" href="./remove_camera/<%= cam._id%>">Remove Camera </a>
+        <a type="button" class="btn-warning btn-sm" href="./edit_camera/<%= cam._id%>">Edit Camera</a>
+        <select name="flip-min" id="flip-min" data-role="slider">
+            <option value="off">Switch Off</option>
+            <option value="on">Switch On</option>
+        </select>
+
+
+
+    </div>
+
+    <% }); %>
+</div>
+
+<%include footer%>
+
