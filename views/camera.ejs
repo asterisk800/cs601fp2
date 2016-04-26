@@ -1,16 +1,15 @@
 <%include header%>
 <%include navigator%>
-<div class="jumbotron-fluid">
-    <h2 class="page-header">Camera</h2>
-    <p>Home Automation Camera</p>
+<div class=" top-title row col-md-12">
+    <div class="jumbotron-fluid">
+        <h2 class="page-header"> Profile for: <%= user.username%></h2>
+        <p>Home Automation Camera:</p>
+    </div>
+    <div class="row">
+        <a type="button" href="./add_camera" class="btn btn-primary btn-lg">Add New Camera</a>
+    </div>
 </div>
-
-<div class="row">
-    <a type="button" href="./add_camera" class="btn btn-primary btn-lg">Add New Camera</a>
-</div>
-
-
-<div class="row card card-block">
+<div class="device-list-div card-block">
 
     <% if (camera.length > 0) { %>
         <!--loop through each item-->
