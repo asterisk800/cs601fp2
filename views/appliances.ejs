@@ -1,7 +1,19 @@
 <%include header%>
 <%include navigator%>
-<div class="jumbotron-fluid">
-    <h2 class="page-header">Appliances</h2>
-    <p>Home Automation Appliances</p>
+<div class=" top-title row col-md-12">
+    <div class="jumbotron-fluid">
+        <h2 class="page-header"> Profile for: <%= user.username%></h2>
+        <p>Home Automation Appliances:</p>
+    </div>
+    <div class="row">
+        <a type="button" href="#./add_camera" class="btn btn-primary btn-lg">Add New Appliance</a>
+    </div>
 </div>
+<div class="device-list-div card-block">
+
+</div>
+
+
+
+
 <%include footer%>
