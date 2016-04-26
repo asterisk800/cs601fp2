@@ -29,7 +29,6 @@
                     <option value="on" selected >Switch On</option>
                 </select>
         </div>
-
         <script type="text/javascript">
             if ( $('#<%= cam._id%>_switch').val() === 'on'){
 
@@ -46,15 +45,16 @@
     <% }); %>
    <% }%>
     <script>
-        $('.camera-switch').onchange(function(){
+        $('.camera-switch').onchange(function(x){
             varoptionSelected=$("option:selected",this);
-            varvalueSelected=this.value;
-            alert("hi");
+            varvalueSelected=this.val();
             if(valueSelected =='on'){
                 $('.camera-div').css("background-color","green");
+                alert("hi");
             }
 
-            if(valueSelected=='off'){
+            if(valueSelected == 'off'){
+                alert("hi");
 
                 $('.camera-div').css("background-color","red");
             }
