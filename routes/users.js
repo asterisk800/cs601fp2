@@ -79,42 +79,7 @@ router.post('/register', function(req, res){
 
 //Update User
 router.post('/update_user', function(req, res){
-	var userid = req.params._id;
-	var email = req.body.email;
-	var username = req.body.username;
-	var password = req.body.password;
-	var password2 = req.body.password2;
-
-	// Validation
-	req.checkBody('email', 'Email is required').notEmpty();
-	req.checkBody('email', 'Email is not valid').isEmail();
-	req.checkBody('username', 'Username is required').notEmpty();
-	req.checkBody('password', 'Password is required').notEmpty();
-	req.checkBody('password2', 'Passwords do not match').equals(req.body.password);
-
-	var errors = req.validationErrors();
-
-	if(errors){
-		res.render('register',{
-			errors:errors
-		});
-	} else {
-		var new_user_info = {
-			_id: userid,
-			email:email,
-			username: username,
-			password: password
-		};
-
-
-		User.update_user(new_user_info, function(err, user){
-			if(err) throw err;
-			console.log("User info" + new_user_info);
-		})
-
-		req.flash('success_msg', 'You are registered and can now login');
-		res.redirect('/users/login');
-	}
+		res.render('profile', {status: "this feature is not implimented yet"});
 });
 
 passport.use(new LocalStrategy(
