@@ -12,7 +12,7 @@ cd cs601fp
 #Initialize a new git repository
 git init
 #Pull the project repository to your folder
-git pull https://github.com/asterisk800/cs601fp.git
+git pull https://github.com/asterisk800/cs601fp2.git
 #Updating npm
 sudo npm install npm -g
 #Test:
